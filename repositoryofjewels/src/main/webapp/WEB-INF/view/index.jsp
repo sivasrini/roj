@@ -38,7 +38,7 @@ a:active{color:blue;}
 </head>
 <body>
 <%@ include file="header.jsp" %>
-<div class="container-fluid" id="e" Style="background-color:#FFA500;outline-style:groove;outline-color:pink;">
+<div class="container-fluid" id="e" Style="background-color:#FFA500;outline-style:groove;outline-color:pink;max-width:1200px;">
 <div id="mycarousel" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
      <li data-target="#mycarousel" data-slide-to="0"></li>
@@ -98,24 +98,24 @@ role="button" data-slide="prev">
 <p><a href="#"><span class="glyphicon glyphicon-hand-right"></span>&nbsp This Video can explain you more........which never stops you from buying jewels here....</a></p>
 </div>
 </div>
-<div class="container" id="e" style="background-color:black;max-width:1100px;margin:auto;padding:0 0 0 0;">
+<div class="container" id="e" style="background-color:black;max-width:1500px;margin:auto;padding:0px;">
 <div class="row">
-<div class="col-sm-2" id="e">
+<div class="col-sm-2">
 <a href="#"><h3 style="font-family:courier new;font-weight:bold;">EARRINGS</h3><p>New bridal collections</p></a>
 </div>
-<div class="col-sm-2" id="e">
+<div class="col-sm-2">
 <a href="#"><h3 style="font-family:courier new;font-weight:bold;">RINGS</h3><p>Engagemnt rings</p></a>
 </div>
-<div class="col-sm-2" id="e">
+<div class="col-sm-2">
 <a href="#"><h3 style="font-family:courier new;font-weight:bold;">BANGLES</h3><p>Light weight bangles</p></a>
 </div>
-<div class="col-sm-2" id="e">
+<div class="col-sm-2">
 <a href="#"><h3 style="font-family:courier new;font-weight:bold;">NECKLACE</h3><p>New designs</p></a>
 </div>
-<div class="col-sm-2" id="e">
+<div class="col-sm-2">
 <a href="#"><h3 style="font-family:courier new;font-weight:bold;">CHAINS</h3><p>Long chains</p></a>
 </div>
-<div class="col-sm-2" id="e">
+<div class="col-sm-2">
 <a href="#"><h3 style="font-family:courier new;font-weight:bold;">OTHERS</h3><p>And much more</p></a>
 </div>
 </div>
