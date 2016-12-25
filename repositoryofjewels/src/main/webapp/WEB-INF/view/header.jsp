@@ -54,7 +54,7 @@ href="<c:url value="resources/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>">
       <li><a href="contactus">Contact us</a></li>
     </ul>
 <ul class="nav navbar-nav navbar-right">
-<li><a href="sign up.html"><span class="glyphicon glyphicon-user"></span>Sign up</a></li>
+<li><a href="register.html"><span class="glyphicon glyphicon-user"></span>Register</a></li>
 <li><a href="login"><span class="glyphicon glyphicon-log-in"></span>login</a></li>
 </ul>
 </div>

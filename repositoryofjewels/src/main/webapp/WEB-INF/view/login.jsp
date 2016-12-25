@@ -17,13 +17,13 @@
 <br><br>
 <div style="background-color:orange">
 <h1>PLEASE LOGIN HERE</h1>
-<form class="navbar-form navbar-left" role="form">
+<form class="navbar-form navbar-left" role="form" action="loginsuccess">
 <div class="input-group">
 <span class="input-group-addon">
 <span class="glyphicon glyphicon-user">
 </span>
 </span>
-<input type="text" class="form-control" placeholder="username"/>
+USERNAME:<input type="text" class="form-control" placeholder="username" name="username" pattern="[A-Za-z0-9]+" required/>
 </div>
 <br>
 <br>
@@ -33,13 +33,12 @@
 <span class="glyphicon glyphicon-lock">
 </span>
 </span>
-<input type="password" class="form-control" placeholder="password"/>
+PASSWORD:<input type="password" class="form-control" placeholder="password" name="password" minlength=10 maxlength=10 required/>
 </div>
 <br>
 <br>
 <br>
-<button type="submit" value="SUBMIT" class="btn btn-success">SUBMIT
-</button> 
+<input type="submit" value="SUBMIT" class="btn btn-success"/> 
 </form>
 </div>
 <%@ include file="footer.jsp" %>

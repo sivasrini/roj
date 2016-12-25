@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.repositoryofjewels.DAO.ProductDAOImple;
@@ -18,6 +19,12 @@ public class HomeController {
 		return "index";
 	}
 
+	@ModelAttribute(name="product")
+public String prdt(){
+		
+		return "register";
+	}
+	
 	@RequestMapping("/aboutus")
 	public String show1()
 	{
@@ -35,6 +42,18 @@ public class HomeController {
 	{
 		
 		return "login";
+	}
+	@RequestMapping("/loginsuccess")
+	public String show5()
+	{
+		
+		return "index";
+	}
+	@RequestMapping("/register")
+	public String show6()
+	{
+		
+		return "register";
 	}
 	@RequestMapping("/category")
 	public String show3(Model model)

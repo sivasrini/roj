@@ -13,15 +13,18 @@ href="<c:url value="resources/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>">
   <script src="<c:url value="resources/fontawesome.js"/>"></script>
   <style>
   #f
-  {
-  overflow:scroll;
+  {height:500px;
+  height:375px;
   outline-style:groove;
   outline-color:lightpink;
-  height:500px;
+  background-color:lavender;
+  text-align:center;
+  line-height:25px;
   }
   </style>
 </head>
 <body>
+<div class="container" style="background-color:orange;">"
 <%@ include file="header.jsp" %>
 <div class="jumbotron text-center" style="font-family:courier new;background-color:black;color:white;">
   <h1>ABOUT US</h1>
@@ -29,7 +32,7 @@ href="<c:url value="resources/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>">
   
 <div class="container">
   <div class="row">
-    <div class="col-sm-6" id="f">
+    <div class="col-sm-6" id="f" style="overflow:scroll;">
 <h1>HISTORY</h1>
     <p>REPSITORY OF JEWELS followed in his visionary father’s footsteps and expanded the ‘REPOSITORY OF JEWELS’ name to a global level. His father Varghese Alukkas started his first jewellery showroom in 1956 and since then Joy Alukkas has made ‘Joyalukkas’ a household name in jewellery. Joy Alukkas took his first step by setting up the jewellery showroom in UAE in the year 1987, since then there has been no looking back.
 
@@ -43,12 +46,12 @@ It was due to his vision that Joyalukkas CSR (Corporate Social Responsibility) e
 
 Joy Alukkas revolutionised retail jewellery trade in India by introducing training programs for his employees and also created the concept of “wedding centre” within the jewellery store. Many a feather is attached to the success hat of Joy Alukkas, including the opening of the world’s largest showroom and the first Diamond Cave in Chennai, India, considered the jewellery hub of India. The phenomenal success of this showroom and this unique concept has proved his foresight and business acumen. Today Joy Alukkas leads the various business interests of the Group which includes, Jewellery, Money Exchange, Malls, Fashion & Silks & Luxury Air Charter. </p>
    </div>
-   <div class="col-sm-6">
-   <p><img src="<c:url value="/resources/images/4.jpg"/>" alt="Rings" class="img-responsive"></p>
+   <div class="col-sm-6" id="f" style="display:block;margin:auto;padding:0px;">
+   <img src="<c:url value="/resources/images/4.JPG"/>" alt="Rings" class="img-responsive">
    </div>
 </div>
 <div class="row">
-    <div class="col-sm-6" id="f">
+    <div class="col-sm-6" id="f"style="overflow-x:hidden;overflow-y:scroll;height:570px;">
     <h1>AWARDS AND REWARDS</h1>
     <p>Joyalukkas Jewellery received the Dubai Service Excellence Scheme (DSES) Award for ‘Best Service Performance Brand’ from the Dubai Department of Economic Development at the Dubai World Trade Center today.
 
@@ -56,13 +59,14 @@ The Dubai Service Excellence Scheme is an initiative of the Department of Econom
 
 “I embarked on my entrepreneurial journey in the UAE with a simple goal: to be the best and world’s favorite jeweller. Thanks to the visionary rulers of UAE and their dynamic nature, I was able to grow ‘Joyalukkas’ brand to be, one of the biggest and best jewellery brands in the world. I sincerely thank H.H Sheikh Mansoor bin Mohammed bin Rashid Al Maktoum and the DSES for bestowing us with this honor and motivating us to keep at our path of excellence. I also thank our customers and my committed team of employees for their patronage and support in helping us make this happen.” said Joy Alukkas, Chairman & MD, Joyalukkas Group.</p>
    </div>
-   <div class="col-sm-6">
-   <p></p>
+   <div class="col-sm-6" id="f" style="display:bolck;padding:0px;">
+   <img src="<c:url value="/resources/images/1.png"/>" alt="Rings" class="img-responsive">
    </div>
 </div>
 </div>
 <br><br><br>
 
 <%@ include file="footer.jsp" %>
+</div>
 </body>
 </html>
