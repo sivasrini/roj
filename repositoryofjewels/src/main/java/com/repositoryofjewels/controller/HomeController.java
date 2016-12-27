@@ -1,28 +1,39 @@
 package com.repositoryofjewels.controller;
 
-import java.util.ArrayList;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.repositoryofjewels.DAO.ProductDAOImple;
-import com.repositoryofjewels.DAO.ProductDAOInter;
-import com.repositoryofjewels.model.Products;
+import com.rojbackend.model.Register;
+
+
+
 
 @Controller
 public class HomeController {
+	
+public HomeController()
+{
+	
+	AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext("com.rojbackend.config");
+    // context.refresh();
+
+ 	System.out.println("before refresh");
+}
+	
 	@RequestMapping(value={"/","/index"})
 	public String show()
 	{
 		return "index";
 	}
 
-	@ModelAttribute(name="product")
-public String prdt(){
+	@ModelAttribute(name="reg")
+public Register prdt(){
 		
-		return "register";
+		return new Register();
 	}
 	
 	@RequestMapping("/aboutus")
@@ -55,16 +66,7 @@ public String prdt(){
 		
 		return "register";
 	}
-	@RequestMapping("/category")
-	public String show3(Model model)
-	{
-		ProductDAOInter obj=new ProductDAOImple();
-		//obj.getProduct();
-		ArrayList<Products> al1=obj.getProduct();
-		model.addAttribute("Product", al1);
-		
-		return "category";
-	}
 	
+
 
 }

@@ -8,6 +8,12 @@
   <name>repositoryofjewels Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+  
+   <dependency>
+ <groupId>com</groupId>
+  <artifactId>rojbackend</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  </dependency>
    <dependency>
    <groupId>javax.servlet</groupId>
    <artifactId>jstl</artifactId>
@@ -55,11 +61,7 @@
     <version>4.3.4.RELEASE</version>
 </dependency>
 
- <dependency>
- <groupId>com</groupId>
-  <artifactId>rojbackend</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  </dependency>
+
 
   </dependencies>
   <build>

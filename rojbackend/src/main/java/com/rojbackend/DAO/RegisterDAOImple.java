@@ -24,6 +24,7 @@ public class RegisterDAOImple implements RegisterDAOInter
 	public void adduser(Register r) {
 		Session s=sessionFactory.openSession();
 		s.save(r);
+		
 		System.out.println("add new user");
 		s.flush();
 		

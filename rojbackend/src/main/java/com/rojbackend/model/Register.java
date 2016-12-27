@@ -13,13 +13,13 @@ public class Register {
 		@Id
 		@GeneratedValue(strategy= GenerationType.IDENTITY)
 		private int roll;
-		private String name;
+		private String uname;
 		private String username;
 		private String password;
 		private String address;
 		
 		
-		private boolean enabled=true;
+		private boolean enabled;
 
 
 		public int getRoll() {
@@ -32,13 +32,15 @@ public class Register {
 		}
 
 
-		public String getName() {
-			return name;
+		
+
+		public String getUname() {
+			return uname;
 		}
 
 
-		public void setName(String name) {
-			this.name = name;
+		public void setUname(String uname) {
+			this.uname = uname;
 		}
 
 
@@ -72,14 +74,16 @@ public class Register {
 		}
 
 
-		public boolean getEnabled() {
+		public boolean isEnabled() {
 			return enabled;
 		}
 
 
-		public void setEnable(boolean enabled) {
+		public void setEnabled(boolean enabled) {
 			this.enabled = enabled;
 		}
+
+
 		
 		
 
