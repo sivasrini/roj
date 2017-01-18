@@ -17,7 +17,7 @@ import com.rojbackend.model.Register;
 
 @Repository
 
-@EnableTransactionManagement
+
 
 public class AppDAOImple implements AppDAOInter
 
@@ -33,7 +33,7 @@ public class AppDAOImple implements AppDAOInter
 		System.out.println("add name");
 		Session s=sessionFactory.openSession();
 		s.save(n);
-		s.flush();
+		//s.flush();
 		//s.close();
 		
 		
@@ -43,7 +43,7 @@ public class AppDAOImple implements AppDAOInter
 		
 		Session s=sessionFactory.openSession();
 		s.update(n);
-		s.flush();
+		//s.flush();
 		// TODO Auto-generated method stub
 		
 	}
@@ -51,7 +51,7 @@ public class AppDAOImple implements AppDAOInter
 	public void removename(AppModel n) {
 		Session s=sessionFactory.openSession();
 		s.delete(n);
-		s.flush();
+		//s.flush();
 		// TODO Auto-generated method stub
 		
 	}

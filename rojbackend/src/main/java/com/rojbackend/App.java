@@ -19,25 +19,25 @@ public class App
     /**
      * @param args
      */
-    public static void main( String[] args )
+  /*  public static void main( String[] args )
     {
-    	AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext("com.rojbackend.config");
+    	//AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext("com.rojbackend.config");
        // context.refresh();
 
     	System.out.println("before refresh");
     	
         System.out.println("after refresh");
-       AppDAOImple obj=(AppDAOImple) context.getBean("AppDAOImple");
+       //AppDAOImple obj=(AppDAOImple) context.getBean("AppDAOImple");
        AppModel obj1=new AppModel();
        obj1.setId(33);
        obj1.setName("earring");
-       //obj.updatename(obj1);
-       //obj.addname(obj1);
-      // obj.removename(obj1);
+       obj.updatename(obj1);
+       obj.addname(obj1);
+      obj.removename(obj1);
        
        AppModel obj2=obj.selectproduct(obj1);
        System.out.println(obj2.getId());
-       System.out.println(obj2.getName());
+       System.out.println(obj2.getName());*/
        
     	
     	/*RegisterDAOImple ob=(RegisterDAOImple) context.getBean("RegisterDAOImple");
@@ -59,4 +59,4 @@ public class App
      
        
     }
-}
+

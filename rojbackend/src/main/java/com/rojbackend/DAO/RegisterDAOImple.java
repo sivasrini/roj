@@ -25,9 +25,6 @@ public class RegisterDAOImple implements RegisterDAOInter
 		Session s=sessionFactory.openSession();
 		s.save(r);
 		
-		System.out.println("add new user");
-		s.flush();
-		
 	}
 
 
@@ -35,7 +32,7 @@ public class RegisterDAOImple implements RegisterDAOInter
 	public void updateuser(Register r) {
 		Session s=sessionFactory.openSession();
 		s.update(r);
-		s.flush();
+	
 		
 	}
 

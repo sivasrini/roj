@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 
 @Entity
@@ -12,35 +14,71 @@ public class Register {
 		
 		@Id
 		@GeneratedValue(strategy= GenerationType.IDENTITY)
-		private int roll;
-		private String uname;
+		private String role;
+		
+	
+		@Size(min=4,max=15, message="the name should be 4 characters")
+		@NotNull
+		private String name;
+		
+		@Size(min=2,max=10, message="the username should be a maximum of 10 characters")
+		@NotNull
 		private String username;
+		
+		@NotNull
 		private String password;
+		
+		private String mobilenumber;
+		
+		
+		private String emailid;
+		
+		
+		@NotNull
 		private String address;
 		
 		
 		private boolean enabled;
 
-
-		public int getRoll() {
-			return roll;
-		}
-
-
-		public void setRoll(int roll) {
-			this.roll = roll;
-		}
-
-
 		
 
-		public String getUname() {
-			return uname;
+		public String getRole() {
+			return role;
 		}
 
 
-		public void setUname(String uname) {
-			this.uname = uname;
+		public void setRole(String role) {
+			this.role = "USER_ROLE";
+		}
+
+
+		public String getName() {
+			return name;
+		}
+
+
+		public String getMobilenumber() {
+			return mobilenumber;
+		}
+
+
+		public void setMobilenumber(String mobilenumber) {
+			this.mobilenumber = mobilenumber;
+		}
+
+
+		public String getEmailid() {
+			return emailid;
+		}
+
+
+		public void setEmailid(String emailid) {
+			this.emailid = emailid;
+		}
+
+
+		public void setName(String name) {
+			this.name = name;
 		}
 
 
@@ -80,7 +118,7 @@ public class Register {
 
 
 		public void setEnabled(boolean enabled) {
-			this.enabled = enabled;
+			this.enabled = true;
 		}
 
 
