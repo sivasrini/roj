@@ -15,30 +15,25 @@
 <body>
 <%@ include file="header.jsp" %>
 <br><br>
-<div style="background-color:orange">
-<h1>PLEASE LOGIN HERE</h1>
-<form class="navbar-form navbar-left" role="form" action="loginsuccess">
-<div class="input-group">
-<span class="input-group-addon">
-<span class="glyphicon glyphicon-user">
-</span>
-</span>
-USERNAME:<input type="text" class="form-control" placeholder="username" name="username" pattern="[A-Za-z0-9]+" required/>
-</div>
-<br>
-<br>
-<br>
-<div class="input-group">
-<span class="input-group-addon">
-<span class="glyphicon glyphicon-lock">
-</span>
-</span>
-PASSWORD:<input type="password" class="form-control" placeholder="password" name="password" minlength=10 maxlength=10 required/>
-</div>
-<br>
-<br>
-<br>
-<input type="submit" value="SUBMIT" class="btn btn-success"/> 
+<div align="center" class="container" class="form-group">
+<form  role="form"  action="loginsuccess">
+<table class="table table-bordered table-hover table-responsive">
+<tr>
+<td colspan="2" align="center" ><h2 style="color:green">LOGIN</h2></td>
+ </tr>
+<tr>
+<td><span class="glyphicon glyphicon-user">Username:</span></td>
+<td ><input type="text" class="form-contol" placeholder="enter your username" required="true" /></td><br><br><br>
+</tr>
+<tr>
+<td><span class="glyphicon glyphicon-lock">Username:</span></td>
+<td ><input type="password" class="form-contol" placeholder="enter your password" required="true" /></td><br><br><br>
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="submit" class="btn btn-success" value="submit" />
+<input type="reset" class="btn btn-danger" value="reset"/></td>
+</tr>
+</table>
 </form>
 </div>
 <%@ include file="footer.jsp" %>

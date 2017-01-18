@@ -89,16 +89,13 @@ role="button" data-slide="prev">
 </div>
 </div>
 <div class=col-xs-6 id="e" style="background-color:black;padding:5px;outline-color:pink;outline-style:groove;text-decoration:none;">
-<h3 style="font-style:italic;text-align:center;color:lightgreen;font-family:courier new;font-weight:bold;">WEDDING JEWELS</h3>
-<p><a href="#"><span class="glyphicon glyphicon-hand-right"></span>&nbsp GOLD jewelleries for your WEDDING celebration</a></p>
-<p><a href="#"><span class="glyphicon glyphicon-hand-right"></span>&nbsp DIAMOND jewelleries to remaind your anniverseries</a></p>
-<p><a href="#"><span class="glyphicon glyphicon-hand-right"></span>&nbsp SILVER jewelleries can fill your normal days which makes your day even more special</a></p>
-<p><a href="#"><span class="glyphicon glyphicon-hand-right"></span>&nbsp India's largest collections of wedding jewelleries</a></p>
-<p><a href="#"><span class="glyphicon glyphicon-hand-right"></span>&nbsp Modern and trendy jewels which are so lite in weight</a></p>
-<p><a href="#"><span class="glyphicon glyphicon-hand-right"></span>&nbsp This Video can explain you more........which never stops you from buying jewels here....</a></p>
+<p><a href="admin"><span class="glyphicon glyphicon-hand-right"></span>admin</a></p><br/><br/>
+<a href="#">
+<img src="<c:url value="/resources/images/12.jpg"/>" alt="bangles" class="img-responsive"></a>
+<br/><br/><br/><br/>
 </div>
 </div>
-<div class="container" id="e" style="background-color:black;max-width:1500px;margin:auto;padding:0px;">
+<div class="container" id="e" style="background-color:silver;max-width:1500px;margin:auto;padding:0px;">
 <div class="row">
 <div class="col-sm-2">
 <a href="#"><h3 style="font-family:courier new;font-weight:bold;">EARRINGS</h3><p>New bridal collections</p></a>

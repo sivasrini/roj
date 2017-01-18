@@ -1,7 +1,11 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html">
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width initial-scale=1">
 <link rel="stylesheet" 
@@ -11,15 +15,8 @@ href="<c:url value="resources/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>">
   <script src="<c:url value="resources/bootstrap-3.3.7-dist/js/bootstrap.min.js"/>"></script>
 <script src="<c:url value="resources/font-awesome-4.7.0/font-awesome-4.7.0/font-awesome.min.css"/>"></script>
   <script src="<c:url value="resources/fontawesome.js"/>"></script>
-  <style>
-  #s
-  {
-  color:red;
-  font-family:courier;
-  font-style:italic;
-  }
-
-  </style>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
 </head>
 <body>
 <div class="container">
@@ -32,35 +29,18 @@ href="<c:url value="resources/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>">
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
 </button>
-      <a class="navbar-brand mystyle" id="s">Repository of Jewels</a>
+      <a class="navbar-brand mystyle" id="s">Admin</a>
     </div>
 <div class="collapse navbar-collapse" id="mynavbar">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="index">Home</a></li>
-      <li class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="">collections<span class="caret"></span>
-</a>
-        <ul class="dropdown-menu">
-        <li><a href="">Earrings</a></li>
-        <li><a href="">chains</a></li>
-        <li><a href="">Rings</a><li>
-        <li><a href="">Necklace</a><li>
-        <li><a href="">Bangles</a></li>
-        <li class="divider"></li>
-          <li><a href="">Others</a></li>
-</ul></li>
-      <li><a href="#">Make your design</a></li>
-      <li><a href="aboutus">About us</a></li>
-      <li><a href="contactus">Contact us</a></li>
-    </ul>
-<ul class="nav navbar-nav navbar-right">
-<li><a href="register.html"><span class="glyphicon glyphicon-user"></span>Register</a></li>
-<li><a href="login"><span class="glyphicon glyphicon-log-in"></span>login</a></li>
+      <li class="active"><a href="product">Addproduct</a></li>
+      <li><a href="#">viewproduct</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+<li><a href="#">Logout</a></li>
 </ul>
-</div>
-  </div>
-</nav>
-</header>
-</div>
+      </div>
+      </div></nav></header></div>
+<%@ include file="footer.jsp" %>
 </body>
 </html>
