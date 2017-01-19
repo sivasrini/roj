@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.rojbackend.model.AppModel;
 import com.rojbackend.model.Register;
+import com.rojbackend.model.makeyourdesign;
 
 
 @Repository
@@ -65,6 +66,13 @@ public class AppDAOImple implements AppDAOInter
 		criteria.add(Restrictions.eq("id", 33));
 		AppModel n1= (AppModel) criteria.uniqueResult();
 		return n1;
+	}
+	public void addmyproduct(makeyourdesign m) {
+		
+		Session s=sessionFactory.openSession();
+		s.save(m);
+		System.out.println(m.getProductname());
+		
 	}
 	
 
