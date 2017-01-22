@@ -12,7 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.rojbackend.model.Register;
 
 @Repository
-@EnableTransactionManagement
 public class RegisterDAOImple implements RegisterDAOInter
 {
 

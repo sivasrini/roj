@@ -12,6 +12,8 @@ public interface AppDAOInter {
 	public void addname(AppModel n);
 	public void updatename(AppModel n);
 	public void removename(AppModel n);
-	public AppModel selectproduct(AppModel n);
+	public List<AppModel> selectproduct(String selectproduct);
 	public void addmyproduct(makeyourdesign m);
+	public List<AppModel> listproducts(AppModel n);
+	public AppModel getproductbyid(int id);
 }

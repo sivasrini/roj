@@ -1,5 +1,6 @@
 package com.rojbackend.DAO;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Criteria;
@@ -17,9 +18,6 @@ import com.rojbackend.model.makeyourdesign;
 
 
 @Repository
-
-
-
 public class AppDAOImple implements AppDAOInter
 
 {
@@ -34,7 +32,7 @@ public class AppDAOImple implements AppDAOInter
 		System.out.println("add name");
 		Session s=sessionFactory.openSession();
 		s.save(n);
-		//s.flush();
+		s.flush();
 		//s.close();
 		
 		
@@ -44,7 +42,8 @@ public class AppDAOImple implements AppDAOInter
 		
 		Session s=sessionFactory.openSession();
 		s.update(n);
-		//s.flush();
+		System.out.println("the new updated value is"+n.getProductcategory());
+		s.flush();
 		// TODO Auto-generated method stub
 		
 	}
@@ -52,21 +51,47 @@ public class AppDAOImple implements AppDAOInter
 	public void removename(AppModel n) {
 		Session s=sessionFactory.openSession();
 		s.delete(n);
-		//s.flush();
+		s.flush();
 		// TODO Auto-generated method stub
 		
 	}
 	
+	
 	@Transactional
-	public AppModel selectproduct(AppModel n)
+	public AppModel getproductbyid(int id)
+	{
+		Session s=sessionFactory.openSession();
+		//Criteria criteria=s.createCriteria(AppModel.class);
+		//criteria.add(Restrictions.eq("id", id));
+		AppModel n1= (AppModel)s.get(AppModel.class, id);
+		System.out.println("sooooo cuuuute" +n1.getProductname());
+		return n1;
+    }
+	
+	@Transactional
+	public List<AppModel> selectproduct(String selectproduct)
 	{
 		Session s=sessionFactory.openSession();
 		
 		Criteria criteria= s.createCriteria(AppModel.class);
-		criteria.add(Restrictions.eq("id", 33));
-		AppModel n1= (AppModel) criteria.uniqueResult();
-		return n1;
+		criteria.add(Restrictions.eq("productcategory", selectproduct));
+		List<AppModel> crit= (List<AppModel>) criteria.list();
+		return crit;
 	}
+	
+	@Transactional
+	public List<AppModel> listproducts(AppModel n)
+	{
+		
+		Session s=sessionFactory.openSession();
+		Criteria criteria= s.createCriteria(AppModel.class);
+	    List<AppModel> crit= (List<AppModel>) criteria.list();
+		return crit;
+		
+		
+	}
+	
+	@Transactional
 	public void addmyproduct(makeyourdesign m) {
 		
 		Session s=sessionFactory.openSession();

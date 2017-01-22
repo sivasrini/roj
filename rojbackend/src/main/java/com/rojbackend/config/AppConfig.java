@@ -6,18 +6,26 @@ import javax.sql.DataSource;
 
 import org.apache.commons.dbcp.BasicDataSource;
 import org.hibernate.SessionFactory;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
+import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.rojbackend.DAO.AppDAOImple;
+import com.rojbackend.DAO.AppDAOInter;
 import com.rojbackend.DAO.RegisterDAOImple;
+import com.rojbackend.DAO.RegisterDAOInter;
+import com.rojbackend.model.AppModel;
+import com.rojbackend.model.Register;
+import com.rojbackend.model.makeyourdesign;
 
 
 @Configuration
+@EnableTransactionManagement
 
 public class AppConfig {
 
@@ -36,18 +44,17 @@ public class AppConfig {
 	}
 	
 	
-	@Bean(name="sessionFactory")
-	public LocalSessionFactoryBean getSessionFactory()
-	{
-		LocalSessionFactoryBean sessionFactory=new LocalSessionFactoryBean();
-		
-		sessionFactory.setDataSource(getH2DataSource());
-		sessionFactory.setHibernateProperties(getHibernateProperties());
-		sessionFactory.setPackagesToScan("com.rojbackend.model");
-		
-		
-		return sessionFactory;
-	}
+	@Autowired
+    @Bean(name = "sessionFactory")
+    public SessionFactory getSessionFactory(DataSource dataSource) {
+    LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
+    sessionBuilder.addProperties(getHibernateProperties());
+    sessionBuilder.addAnnotatedClasses(AppModel.class);
+    sessionBuilder.addAnnotatedClasses(Register.class);
+    sessionBuilder.addAnnotatedClasses(makeyourdesign.class);
+   
+      return sessionBuilder.buildSessionFactory();
+    }
 
 	
 	public Properties getHibernateProperties()
@@ -60,6 +67,7 @@ public class AppConfig {
 		
 	}
 	
+	@Autowired
 	@Bean(name="transactionmanager")
 	public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory)
 	{
@@ -72,20 +80,21 @@ public class AppConfig {
 		
 	}
 	
+	//@Autowired
 	@Bean(name="AppDAOImple")
-	public AppDAOImple getAppDaoImple(SessionFactory sessionFactory)
+	public AppDAOInter getAppDaoImple(SessionFactory sessionFactory)
 	{
-		AppDAOImple dao=new AppDAOImple();
-		
-		return dao;
+		System.out.println("i am appmodel");
+		return new AppDAOImple();
 	}
 	
+	//@Autowired
 	@Bean(name="RegisterDAOImple")
-	public RegisterDAOImple getRegisterDAOImple(SessionFactory sessionFactory)
+	public RegisterDAOInter getRegisterDAOImple(SessionFactory sessionFactory)
 	{
-		RegisterDAOImple dao=new RegisterDAOImple();
 		
-		return dao;
+		System.out.println("i am register");
+		return new RegisterDAOImple();
 	}
 
 	
